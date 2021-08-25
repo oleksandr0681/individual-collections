@@ -1,0 +1,36 @@
+﻿@model IEnumerable<IndividualCollectionsWeb.Models.Collection>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="collection">
+            <a href="~/Collections/Details/@item.Id">
+                <div>
+                    @if (item.Title != null)
+                    {
+                        <h3>@item.Title</h3>
+                    }
+                    @if (item.Description != null)
+                    {
+                        <p>
+                            @item.Description
+                        </p>
+                    }
+                    @if (item.Theme != null && item.Theme.Title != null)
+                    {
+                        <h3>
+                            @item.Theme.Title
+                        </h3>
+                    }
+                </div>
+            </a>
+        </div>
+    }
+}

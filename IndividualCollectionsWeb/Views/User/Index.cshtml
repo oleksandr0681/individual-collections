@@ -1,0 +1,45 @@
+﻿@model IEnumerable<IndividualCollectionsWeb.Models.Collection>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Создать коллекцию", "CreateCollection")
+</p>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="collection" style="border: 1pt solid #cccccc;">
+            <a href="~/User/Collection/@item.Id">
+                <div>
+                    @if (item.Title != null)
+                    {
+                        <h3>@item.Title</h3>
+                    }
+                    @if (item.Description != null)
+                    {
+                        <p>
+                            @item.Description
+                        </p>
+                    }
+                    @if (item.Theme != null && item.Theme.Title != null)
+                    {
+                        <h3>
+                            @item.Theme.Title
+                        </h3>
+                    }
+                </div>
+            </a>
+        </div>
+        @Html.ActionLink("Edit", "EditCollection", new { id = item.Id })
+        <span>&nbsp; | &nbsp;</span>
+        @Html.ActionLink("Details", "DetailsCollection", new { id = item.Id })
+        <span>&nbsp; | &nbsp;</span>
+        @Html.ActionLink("Delete", "DeleteCollection", new { id = item.Id })
+    }
+}

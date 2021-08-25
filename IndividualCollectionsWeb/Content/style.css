@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.maxWidth {
+    width: 100%;
+}
+
+.collection {
+    border: 1pt solid #cccccc;
+    background-color: #eeeeee;
+    margin: 10pt;
+    overflow: hidden;
+}

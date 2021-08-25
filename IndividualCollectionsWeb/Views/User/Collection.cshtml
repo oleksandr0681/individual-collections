@@ -1,0 +1,152 @@
+﻿@model IEnumerable<IndividualCollectionsWeb.Models.Item>
+
+@{
+    ViewBag.Title = "Collection";
+}
+
+<h2>Collection</h2>
+
+<h3>
+    @ViewBag.Collection.Title
+</h3>
+
+<p>
+    @ViewBag.Collection.Description
+</p>
+
+<p>
+    @Html.ActionLink("Создать айтем", "CreateItem")
+</p>
+
+@if (Model != null)
+{
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Collection.ApplicationUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tags)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddingTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean3)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Collection.ApplicationUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tags)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numerical1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numerical2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numerical3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.String1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.String2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.String3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Boolean1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Boolean2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Boolean3)
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    }
+
+</table>
+}

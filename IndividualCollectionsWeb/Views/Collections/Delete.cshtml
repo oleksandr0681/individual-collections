@@ -1,0 +1,304 @@
+﻿@model IndividualCollectionsWeb.Models.Collection
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Collection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Theme.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Theme.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumerical1Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNumerical1Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical1Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumerical2Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNumerical2Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical2Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumerical3Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsNumerical3Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical3Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsString1Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsString1Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String1Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsString2Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsString2Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String2Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsString3Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsString3Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String3Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsText1Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsText1Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text1Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsText2Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsText2Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text2Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsText3Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsText3Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text3Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDate1Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDate1Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date1Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDate2Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDate2Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date2Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDate3Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDate3Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date3Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBoolean1Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBoolean1Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean1Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBoolean2Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBoolean2Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean2Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBoolean3Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBoolean3Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean3Title)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

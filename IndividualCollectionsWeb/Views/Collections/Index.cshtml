@@ -1,0 +1,237 @@
+﻿@model IEnumerable<IndividualCollectionsWeb.Models.Collection>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Theme.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNumerical1Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical1Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNumerical2Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical2Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNumerical3Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numerical3Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsString1Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String1Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsString2Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String2Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsString3Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.String3Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsText1Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text1Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsText2Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text2Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsText3Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text3Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDate1Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date1Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDate2Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date2Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDate3Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date3Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBoolean1Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean1Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBoolean2Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean2Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBoolean3Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boolean3Title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Theme.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNumerical1Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numerical1Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNumerical2Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numerical2Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNumerical3Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numerical3Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsString1Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.String1Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsString2Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.String2Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsString3Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.String3Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsText1Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text1Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsText2Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text2Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsText3Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text3Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDate1Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date1Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDate2Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date2Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDate3Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date3Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBoolean1Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boolean1Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBoolean2Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boolean2Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBoolean3Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boolean3Title)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
