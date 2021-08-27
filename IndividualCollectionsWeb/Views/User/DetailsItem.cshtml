@@ -1,0 +1,170 @@
+﻿@model IndividualCollectionsWeb.Models.Item
+
+@{
+    ViewBag.Title = "DetailsItem";
+}
+
+<h2>DetailsItem</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Collection.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Collection.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddingTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddingTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerical3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numerical3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.String3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.String3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boolean3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boolean3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditItem", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

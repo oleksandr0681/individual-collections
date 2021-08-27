@@ -143,7 +143,9 @@
                 @Html.DisplayFor(modelItem => item.Boolean3)
             </td>
             <td>
-                
+                @Html.ActionLink("Редактировать айтем", "EditItem", new { id = item.Id }) |
+                @Html.ActionLink("Подробности айтема", "DetailsItem", new { id = item.Id }) |
+                @Html.ActionLink("Удалить айтем", "DeleteItem", new { id = item.Id })
             </td>
         </tr>
     }

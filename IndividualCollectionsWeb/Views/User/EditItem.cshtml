@@ -1,19 +1,20 @@
 ﻿@model IndividualCollectionsWeb.Models.Item
 
 @{
-    ViewBag.Title = "CreateItem";
+    ViewBag.Title = "EditItem";
 }
 
-<h2>CreateItem</h2>
+<h2>EditItem</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>Item</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.AddingTime)
 
         <div class="form-group">
@@ -168,7 +169,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
@@ -177,7 +178,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
