@@ -26,6 +26,7 @@ namespace IndividualCollectionsWeb.Models
         public int Id { get; set; }
 
         [MaxLength(100)]
+        [Display(Name = "Тема")]
         public string Title { get; set; } = "";
     }
 
@@ -36,9 +37,11 @@ namespace IndividualCollectionsWeb.Models
         public string ApplicationUserId { get; set; } 
 
         [MaxLength(150)]
+        [Display(Name = "Название коллекции")]
         public string Title { get; set; } = "";
 
         [MaxLength(1000)]
+        [Display(Name = "Описание")]
         public string Description { get; set; } = "";
 
         public int ThemeId { get; set; } 
@@ -47,79 +50,109 @@ namespace IndividualCollectionsWeb.Models
         [DataType(DataType.ImageUrl)]
         public string PictureUrl { get; set; } = "";
 
+        [Display(Name = "Числовое поле 1 включено")]
         public bool IsNumerical1Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название числового поля 1")]
         public string Numerical1Title { get; set; } = "";
 
+        [Display(Name = "Числовое поле 2 включено")]
         public bool IsNumerical2Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название числового поля 2")]
         public string Numerical2Title { get; set; } = "";
 
+        [Display(Name = "Числовое поле 3 включено")]
         public bool IsNumerical3Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название числового поля 3")]
         public string Numerical3Title { get; set; } = "";
 
+        [Display(Name = "Однострочное поле 1 включено")]
         public bool IsString1Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название однострочного поля 1")]
         public string String1Title { get; set; } = "";
 
+        [Display(Name = "Однострочное поле 2 включено")]
         public bool IsString2Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название однострочного поля 2")]
         public string String2Title { get; set; } = "";
 
+        [Display(Name = "Однострочное поле 3 включено")]
         public bool IsString3Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название однострочного поля 3")]
         public string String3Title { get; set; } = "";
 
+        [Display(Name = "Текстовое поле 1 включено")]
         public bool IsText1Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название текстового поля 1")]
         public string Text1Title { get; set; } = "";
 
+        [Display(Name = "Текстовое поле 2 включено")]
         public bool IsText2Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название текстового поля 2")]
         public string Text2Title { get; set; } = "";
 
+        [Display(Name = "Текстовое поле 3 включено")]
         public bool IsText3Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название текстового поля 3")]
         public string Text3Title { get; set; } = "";
 
+        [Display(Name = "Дата 1 включена")]
         public bool IsDate1Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название даты 1")]
         public string Date1Title { get; set; } = "";
 
+        [Display(Name = "Дата 2 включена")]
         public bool IsDate2Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название даты 2")]
         public string Date2Title { get; set; } = "";
 
+        [Display(Name = "Дата 3 включена")]
         public bool IsDate3Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название даты 3")]
         public string Date3Title { get; set; } = "";
 
+        [Display(Name = "Чек-бокс 1 включен")]
         public bool IsBoolean1Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название чек-бокса 1")]
         public string Boolean1Title { get; set; } = "";
 
+        [Display(Name = "Чек-бокс 2 включен")]
         public bool IsBoolean2Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название чек-бокса 2")]
         public string Boolean2Title { get; set; } = "";
 
+        [Display(Name = "Чек-бокс 3 включен")]
         public bool IsBoolean3Enabled { get; set; } = false;
 
         [MaxLength(100)]
+        [Display(Name = "Название чек-бокса 3")]
         public string Boolean3Title { get; set; } = "";
 
         public ICollection<Item> Items { get; set; }
@@ -133,11 +166,14 @@ namespace IndividualCollectionsWeb.Models
         public Collection Collection { get; set; } 
 
         [MaxLength(150)]
+        [Display(Name = "Название айтема")]
         public string Title { get; set; } = "";
 
         [MaxLength(200)]
+        [Display(Name = "Тэги")]
         public string Tags { get; set; } = "";
 
+        [Display(Name = "Время добавления")]
         public DateTime? AddingTime { get; set; } = DateTime.Now;
 
         public decimal? Numerical1 { get; set; } = 0;
@@ -178,6 +214,10 @@ namespace IndividualCollectionsWeb.Models
         public bool Boolean2 { get; set; } = false;
 
         public bool Boolean3 { get; set; } = false;
+
+        public ICollection<Comment> Comments { get; set; }
+
+        public ICollection<Like> Likes { get; set; }
     }
 
     public class Comment
