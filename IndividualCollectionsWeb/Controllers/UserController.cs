@@ -199,12 +199,18 @@ namespace IndividualCollectionsWeb.Controllers
         }
 
         // GET: User/CreateItem
-        public ActionResult CreateItem()
+        public ActionResult CreateItem(int? id)
         {
             ApplicationUser user = UserManager.FindById(User.Identity.GetUserId());
             if (user != null)
             {
-                ViewBag.CollectionId = new SelectList(db.Collections.Include(c => c.Theme).Where(c => c.ApplicationUserId == user.Id), "Id", "Title");
+                ViewBag.CollectionId = new SelectList(db.Collections.Include(c => c.Theme).Where(c => c.ApplicationUserId == user.Id && c.Id == id), "Id", "Title");
+                Collection collection = db.Collections.Find(id);
+                if (collection == null)
+                {
+                    return HttpNotFound();
+                }
+                ViewBag.Collection = collection;
             }
             else
             {

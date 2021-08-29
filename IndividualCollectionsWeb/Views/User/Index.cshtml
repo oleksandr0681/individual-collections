@@ -4,8 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Коллекции @User.Identity.Name</h2>
 
+<br />
 <p>
     @Html.ActionLink("Создать коллекцию", "CreateCollection")
 </p>
@@ -36,10 +37,10 @@
                 </div>
             </a>
         </div>
-        @Html.ActionLink("Edit", "EditCollection", new { id = item.Id })
+        @Html.ActionLink("Редактировать", "EditCollection", new { id = item.Id })
         <span>&nbsp; | &nbsp;</span>
-        @Html.ActionLink("Details", "DetailsCollection", new { id = item.Id })
+        @Html.ActionLink("Подробности коллекции", "DetailsCollection", new { id = item.Id })
         <span>&nbsp; | &nbsp;</span>
-        @Html.ActionLink("Delete", "DeleteCollection", new { id = item.Id })
+        @Html.ActionLink("Удалить коллекцию", "DeleteCollection", new { id = item.Id })
     }
 }

@@ -4,14 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2></h2>
 
 @if (Model != null)
 {
     foreach (var item in Model)
     {
         <div class="collection">
-            <a href="~/Collections/Details/@item.Id">
+            <a href="~/Collections/Collection/@item.Id">
                 <div>
                     @if (item.Title != null)
                     {

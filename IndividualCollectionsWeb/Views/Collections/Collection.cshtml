@@ -1,0 +1,228 @@
+﻿@model IEnumerable<IndividualCollectionsWeb.Models.Item>
+
+@{
+    ViewBag.Title = "Collection";
+}
+
+<h2>Collection</h2>
+
+<h3>
+    @ViewBag.Collection.Title
+</h3>
+
+<p>
+    @ViewBag.Collection.Description
+</p>
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tags)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddingTime)
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsNumerical1Enabled)
+                {
+                    @ViewBag.Collection.Numerical1Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsNumerical2Enabled)
+                {
+                    @ViewBag.Collection.Numerical2Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsNumerical3Enabled)
+                {
+                    @ViewBag.Collection.Numerical3Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsString1Enabled)
+                {
+                    @ViewBag.Collection.String1Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsString2Enabled)
+                {
+                    @ViewBag.Collection.String2Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsString3Enabled)
+                {
+                    @ViewBag.Collection.String3Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsText1Enabled)
+                {
+                    @ViewBag.Collection.Text1Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsText2Enabled)
+                {
+                    @ViewBag.Collection.Text2Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsText3Enabled)
+                {
+                    @ViewBag.Collection.Text3Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsDate1Enabled)
+                {
+                    @ViewBag.Collection.Date1Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsDate2Enabled)
+                {
+                    @ViewBag.Collection.Date2Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsDate3Enabled)
+                {
+                    @ViewBag.Collection.Date3Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsBoolean1Enabled)
+                {
+                    @ViewBag.Collection.Boolean1Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsBoolean2Enabled)
+                {
+                    @ViewBag.Collection.Boolean2Title
+                }
+            </th>
+            <th>
+                @if (ViewBag.Collection.IsBoolean3Enabled)
+                {
+                    @ViewBag.Collection.Boolean3Title
+                }
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddingTime)
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsNumerical1Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Numerical1)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsNumerical2Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Numerical2)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsNumerical3Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Numerical3)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsString1Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.String1)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsString2Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.String2)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsString3Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.String3)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsText1Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Text1)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsText2Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Text2)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsText3Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Text3)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsDate1Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Date1)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsDate2Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Date2)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsDate3Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Date3)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsBoolean1Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Boolean1)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsBoolean2Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Boolean2)
+                    }
+                </td>
+                <td>
+                    @if (ViewBag.Collection.IsBoolean3Enabled)
+                    {
+                        @Html.DisplayFor(modelItem => item.Boolean3)
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+}

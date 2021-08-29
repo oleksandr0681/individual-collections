@@ -1,10 +1,10 @@
 ﻿@model IndividualCollectionsWeb.Models.Item
 
 @{
-    ViewBag.Title = "CreateItem";
+    ViewBag.Title = "Создать айтем";
 }
 
-<h2>CreateItem</h2>
+<h2>Создать айтем</h2>
 
 @using (Html.BeginForm())
 {
@@ -40,104 +40,190 @@
             </div>
         </div>
 
+        @if (ViewBag.Collection.IsNumerical1Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Numerical1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class = "control-label col-md-2">@ViewBag.Collection.Numerical1Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Numerical1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Numerical1, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Numerical1)
+        }
 
+        @if (ViewBag.Collection.IsNumerical2Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Numerical2, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Numerical2, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Numerical2, "", new { @class = "text-danger" })
-            </div>
+             <label class = "control-label col-md-2">@ViewBag.Collection.Numerical2Title</label>
+             <div class="col-md-10">
+                 @Html.EditorFor(model => model.Numerical2, new { htmlAttributes = new { @class = "form-control" } })
+                 @Html.ValidationMessageFor(model => model.Numerical2, "", new { @class = "text-danger" })
+             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Numerical2)
+        }
 
+        @if (ViewBag.Collection.IsNumerical3Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Numerical3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class = "control-label col-md-2">@ViewBag.Collection.Numerical3Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Numerical3, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Numerical3, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Numerical3)
+        }
 
+        @if (ViewBag.Collection.IsString1Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.String1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class = "control-label col-md-2">@ViewBag.Collection.String1Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.String1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.String1, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.String1)
+        }
 
+        @if (ViewBag.Collection.IsString2Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.String2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class = "control-label col-md-2">@ViewBag.Collection.String2Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.String2, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.String2, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.String2)
+        }
 
+        @if (ViewBag.Collection.IsString3Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.String3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class = "control-label col-md-2">@ViewBag.Collection.String3Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.String3, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.String3, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.String3)
+        }
 
+        @if (ViewBag.Collection.IsText1Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Text1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Text1Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Text1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Text1, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Text1)
+        }
 
+        @if (ViewBag.Collection.IsText2Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Text2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Text2Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Text2, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Text2, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Text2)
+        }
 
+        @if (ViewBag.Collection.IsText3Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Text3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Text3Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Text3, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Text3, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Text3)
+        }
 
+        @if (ViewBag.Collection.IsDate1Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Date1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Date1Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Date1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Date1, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Date1)
+        }
 
+        @if (ViewBag.Collection.IsDate2Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Date2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Date2Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Date2, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Date2, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Date2)
+        }
 
+        @if (ViewBag.Collection.IsDate3Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Date3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Date3Title</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Date3, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Date3, "", new { @class = "text-danger" })
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Date3)
+        }
 
+        @if (ViewBag.Collection.IsBoolean1Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Boolean1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Boolean1Title</label>
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Boolean1)
@@ -145,9 +231,16 @@
                 </div>
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Boolean1)
+        }
 
+        @if (ViewBag.Collection.IsBoolean2Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Boolean2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Boolean2Title</label>
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Boolean2)
@@ -155,9 +248,16 @@
                 </div>
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Boolean2)
+        }
 
+        @if (ViewBag.Collection.IsBoolean3Enabled)
+        {
         <div class="form-group">
-            @Html.LabelFor(model => model.Boolean3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">@ViewBag.Collection.Boolean3Title</label>
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Boolean3)
@@ -165,10 +265,15 @@
                 </div>
             </div>
         </div>
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Boolean3)
+        }
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Создать" class="btn btn-default" />
             </div>
         </div>
     </div>

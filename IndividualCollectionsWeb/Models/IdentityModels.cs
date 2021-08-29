@@ -209,11 +209,11 @@ namespace IndividualCollectionsWeb.Models
         [DataType(DataType.Date)]
         public DateTime? Date3 { get; set; } = DateTime.Today;
 
-        public bool Boolean1 { get; set; } = false;
+        public bool? Boolean1 { get; set; } = false;
 
-        public bool Boolean2 { get; set; } = false;
+        public bool? Boolean2 { get; set; } = false;
 
-        public bool Boolean3 { get; set; } = false;
+        public bool? Boolean3 { get; set; } = false;
 
         public ICollection<Comment> Comments { get; set; }
 
