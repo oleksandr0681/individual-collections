@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using IndividualCollectionsWeb.Models;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace IndividualCollectionsWeb.Controllers
 {
@@ -216,6 +217,29 @@ namespace IndividualCollectionsWeb.Controllers
                     }
                 }
                 return View(editUser);
+            }
+            else
+            {
+                return RedirectToAction("ChangePassword", "Manage");
+            }
+        }
+
+        public ActionResult UserIndex(string id)
+        {
+            ApplicationUser adminUser = UserManager.FindById(User.Identity.GetUserId());
+            if (adminUser != null && adminUser.DefaultPasswordChanged)
+            {
+                IEnumerable<Collection> collections = null;
+                ApplicationUser user = UserManager.FindById(id);
+                if (user != null)
+                {
+                    collections = db.Collections.Include(c => c.Theme).Where(c => c.ApplicationUserId == user.Id);
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Пользователь не найден");
+                }
+                return View(collections.ToList());
             }
             else
             {
