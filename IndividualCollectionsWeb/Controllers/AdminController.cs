@@ -13,6 +13,8 @@ namespace IndividualCollectionsWeb.Controllers
     [Authorize(Roles = "administrator")]
     public class AdminController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: Admin
         public ActionResult Index()
         {
@@ -53,6 +55,12 @@ namespace IndividualCollectionsWeb.Controllers
                 ApplicationUser user = await UserManager.FindByIdAsync(id);
                 if (user != null)
                 {
+                    IQueryable<Collection> collections = db.Collections.Where(c => c.ApplicationUserId == user.Id);
+                    for (int i = 0; i < collections.ToList().Count; i++)
+                    {
+                        db.Collections.Remove(collections.ToList()[i]);
+                    }
+                    db.SaveChanges();
                     IdentityResult result = await UserManager.DeleteAsync(user);
                     if (result.Succeeded)
                     {
